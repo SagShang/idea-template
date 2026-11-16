@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== 基本信息：new-idea.sh 会自动替换 __TITLE__ 和 __REPO__ ===== -->
+  <title>__TITLE__</title>
+  <meta name="description" content="One-sentence summary of the idea.">
+  <meta name="author" content="Wentao Shang">
+
+  <!-- 社交平台分享卡片 -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="__TITLE__">
+  <meta property="og:description" content="One-sentence summary of the idea.">
+  <meta property="og:url" content="https://sagshang.github.io/__REPO__/">
+  <meta property="og:image" content="https://sagshang.github.io/__REPO__/static/images/social_preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX 公式：行内 $...$ ，独立 $$...$$ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],ignoredTags:['script','noscript','style','textarea','pre','code']});"></script>
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <!-- ===== 标题 / 作者 / 链接 ===== -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">__TITLE__</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://github.com/SagShang" target="_blank">Wentao Shang</a></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Affiliation<br>Idea draft · __DATE__</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- 不需要的按钮直接删掉 -->
+                <span class="link-block">
+                  <a href="https://github.com/SagShang/__REPO__" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+                  </a>
+                </span>
+                <!--
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+                  </a>
+                </span>
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 头图 + TL;DR ===== -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="Teaser figure" style="width:100%;border-radius:8px;">
+        <!-- 用视频的话换成：
+        <video autoplay controls muted loop playsinline width="100%"><source src="static/videos/teaser.mp4" type="video/mp4"></video>
+        -->
+        <h2 class="subtitle has-text-centered">
+          <b>TL;DR:</b> One sentence that states the idea and why it matters.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 摘要 ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>Problem.</b> What is hard today and why existing approaches fall short.
+              <b>Idea.</b> The key insight in one or two sentences.
+              <b>Approach.</b> How it would be implemented.
+              <b>Expected outcome.</b> What it would enable and how to tell it worked.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 方法 ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <figure><img src="static/images/method.png" alt="Method overview" style="width:100%;">
+        <figcaption class="has-text-centered is-size-6"><b>Figure 1.</b> Overview of the approach.</figcaption></figure>
+      <div class="content has-text-justified">
+        <p>
+          Describe the pipeline. Inline math works like $x_t \in \mathbb{R}^d$, and display math like:
+        </p>
+        $$\mathcal{L}(\theta) = \mathbb{E}_{(x,y)\sim\mathcal{D}}\big[\,\ell(f_\theta(x), y)\,\big] + \lambda \lVert \theta \rVert_2^2$$
+        <ol>
+          <li><b>Step one.</b> ...</li>
+          <li><b>Step two.</b> ...</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 结果：轮播图 + 表格 ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <!-- 并排图：加减 column 即可；要轮播可改回 class="carousel results-carousel" -->
+      <div class="columns">
+        <div class="column">
+          <figure><img src="static/images/result1.png" alt="Result 1" loading="lazy" style="width:100%;border-radius:8px;"/>
+            <figcaption class="has-text-centered is-size-6"><b>Figure 2.</b> Caption for result 1.</figcaption></figure>
+        </div>
+        <div class="column">
+          <figure><img src="static/images/result2.png" alt="Result 2" loading="lazy" style="width:100%;border-radius:8px;"/>
+            <figcaption class="has-text-centered is-size-6"><b>Figure 3.</b> Caption for result 2.</figcaption></figure>
+        </div>
+      </div>
+      <div class="content">
+        <table class="table is-fullwidth is-striped is-narrow">
+          <thead><tr><th>Method</th><th>Success ↑</th><th>Time (s) ↓</th></tr></thead>
+          <tbody>
+            <tr><td>Baseline</td><td>0.00</td><td>0.0</td></tr>
+            <tr><td><b>Ours</b></td><td><b>0.00</b></td><td><b>0.0</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 讨论 / 下一步 ===== -->
+  <section class="section">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">Discussion &amp; Next Steps</h2>
+      <ul>
+        <li>Open question ...</li>
+        <li>Planned experiment ...</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== BibTeX ===== -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i><span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@misc{shang__BIBYEAR_____REPO__,
+  title  = {__TITLE__},
+  author = {Shang, Wentao},
+  year   = {__BIBYEAR__},
+  url    = {https://sagshang.github.io/__REPO__/}
+}</code></pre>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+              which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
