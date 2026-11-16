@@ -29,7 +29,8 @@ for i in $(seq 1 30); do
   if gh api "repos/$OWNER/$name/commits?per_page=1" >/dev/null 2>&1; then break; fi
   sleep 2
 done
-gh repo clone "$OWNER/$name" "$dir"
+# 用 user@github.com 形式直连，避开 ~/.gitconfig 里的 gh-proxy insteadOf 改写（代理无法推送）
+git clone -q "https://$OWNER@github.com/$OWNER/$name.git" "$dir"
 
 cd "$dir"
 esc_title=$(printf '%s' "$title" | sed -e 's/[\/&|]/\\&/g')
@@ -47,8 +48,8 @@ git commit -q -m "Init idea page: $title"
 git push -q origin HEAD
 
 echo ">> 开启 GitHub Pages (main 分支根目录)"
-gh api -X POST "repos/$OWNER/$name/pages" \
-  -f "source[branch]=main" -f "source[path]=/" >/dev/null
+echo '{"source":{"branch":"main","path":"/"}}' | \
+  gh api -X POST "repos/$OWNER/$name/pages" --input - >/dev/null
 
 echo
 echo "完成。本地目录: $dir"
